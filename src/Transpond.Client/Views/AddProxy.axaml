@@ -1,0 +1,53 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+             x:Class="Transpond.Client.Views.AddProxy">
+	<StackPanel>
+
+		<StackPanel>
+			<Grid HorizontalAlignment="Center" Margin="8" ColumnDefinitions="Auto, 300" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+				<TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="2">配置Key:</TextBlock>
+				<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ProxyOptions.Key}" VerticalAlignment="Center" Margin="2" />
+
+
+			</Grid>
+		</StackPanel>
+
+		<StackPanel>
+			<Grid HorizontalAlignment="Center" Margin="8" ColumnDefinitions="Auto, 300" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+				<TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="2">本地Ip:</TextBlock>
+				<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ProxyOptions.LocalIp}" VerticalAlignment="Center" Margin="2" />
+			</Grid>
+		</StackPanel>
+
+		<StackPanel>
+			<Grid HorizontalAlignment="Center" Margin="8" ColumnDefinitions="Auto, 300" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+				<TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="2">本地端口:</TextBlock>
+				<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ProxyOptions.LocalPort}" VerticalAlignment="Center" Margin="2" />
+			</Grid>
+		</StackPanel>
+
+		<StackPanel>
+			<Grid HorizontalAlignment="Center" Margin="8" ColumnDefinitions="Auto, 300" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+				<TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="2">远程Ip:</TextBlock>
+				<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ProxyOptions.ForwardIp}" VerticalAlignment="Center" Margin="2" />
+			</Grid>
+		</StackPanel>
+		<StackPanel>
+			<Grid HorizontalAlignment="Center" Margin="8" ColumnDefinitions="Auto, 300" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+				<TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="2">远程端口:</TextBlock>
+				<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ProxyOptions.ForwardPort}" VerticalAlignment="Center" Margin="2" />
+			</Grid>
+		</StackPanel>
+
+		<StackPanel>
+			<Grid HorizontalAlignment="Center" Margin="8" ColumnDefinitions="Auto, 300" RowDefinitions="Auto,Auto,Auto,Auto,Auto">
+				<TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="2">协议:</TextBlock>
+				<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ProxyOptions.Protocol}" VerticalAlignment="Center" Margin="2" />
+			</Grid>
+		</StackPanel>
+	</StackPanel>
+
+</UserControl>

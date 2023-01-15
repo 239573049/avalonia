@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+			 d:DesignWidth="{Binding Auth}" 
+			 d:DesignHeight="450"
+			 Width="{Binding Auth}"
+             x:Class="Transpond.Client.Views.ListProxy">
+	<StackPanel>
+		<Grid>
+			<DataGrid CanUserReorderColumns="True" 
+					  CanUserResizeColumns="True" 
+					  CanUserSortColumns="False" 
+					  Name="ListData" 
+					  Items="{Binding ProxyOptions}" 
+					  AutoGenerateColumns="False" 
+					  FontSize="20" 
+					  SelectedItem="{Binding SelectProxyOptions}"
+					  Width="{Binding ListDataWidth}" IsReadOnly="True">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="主键" Binding="{Binding Key}"/>
+					<DataGridTextColumn Header="协议" Binding="{Binding Protocol}" />
+					<DataGridTextColumn Header="本地IP" Binding="{Binding LocalIp}" />
+					<DataGridTextColumn Header="本地端口" Binding="{Binding LocalPort}" />
+					<DataGridTextColumn Header="远程IP" Binding="{Binding ForwardIp}" />
+					<DataGridTextColumn Header="远程端口" Binding="{Binding ForwardPort}" />
+				</DataGrid.Columns>
+			</DataGrid>
+		</Grid>
+	</StackPanel>
+</UserControl>
